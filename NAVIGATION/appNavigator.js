@@ -5,17 +5,16 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 //Screen Imports
 import { CreateMarathonScreen } from "../SCREENS/CreateMarathonScreen";
-import { LoginScreen } from "../SCREENS/LoginScreen";
-import { SettingScreen } from "../SCREENS/SettingScreen";
-import { ViewMarathonScreen } from "../SCREENS/ViewMarathonScreen";
-
+// import { LoginScreen } from "../SCREENS/LoginScreen";
+// import { SettingScreen } from "../SCREENS/SettingScreen";
+import ViewMarathonScreen from "../SCREENS/ViewMarathonScreen";
 const Stack = createNativeStackNavigator();
 
 export default function StackNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-      initialRouteName="Login"
+      initialRouteName="ViewMarathon"
       >
         <Stack.Screen
           name="CreateMarathon"
@@ -23,11 +22,11 @@ export default function StackNavigator() {
         />
 
         <Stack.Screen
-          name="Marathons"
+          name="ViewMarathon"
           component={ViewMarathonScreen}
         />
     
-        <Stack.Screen
+        {/* <Stack.Screen
         name="Login"
         component={LoginScreen}
         />
@@ -35,7 +34,7 @@ export default function StackNavigator() {
         <Stack.Screen
         name="Settings"
         component={SettingScreen}
-        />
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
